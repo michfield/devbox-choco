@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-Common</id>
+    <title>Devbox Common Settings</title>
+    <version>0.1.0</version>
+    <authors>Ethan Brown, Michael Field</authors>
+    <owners>Michael Field</owners>
+    <summary>Devbox-Common</summary>
+    <description>
+      Set environment variable 'chocolatey_bin_root' to 'C:\Tools', only
+      if it's not already set. This allows later packages that would
+      otherwise install into system root directory, to install in this
+      'C:\Tools' subdirectory. Packages that behave in this way are:
+      Ruby, Python etc - almost any package that is not comfortable with
+      spaces in filenames
+    </description>
+    <projectUrl>https://github.com/michfield/devbox-choco</projectUrl>
+    <tags>devbox admin path binroot</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common/Devbox-Common.png</iconUrl>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
