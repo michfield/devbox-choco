@@ -1,4 +1,4 @@
-﻿# Exact package name. Directory will be created
+﻿# Exact package name. Filename-safe - directory will be created
 # in choco\lib based on this value
 #
 $pkgName = 'Devbox-Common'
