@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-Common.extension</id>
+    <title>Devbox Common Extension</title>
+    <version>0.1.0</version>
+    <authors>Michael Field</authors>
+    <owners>Michael Field</owners>
+    <summary>Helper Functions packed as Chocolatey extension</summary>
+    <description>
+      This package contains helper functions installed as Chocolatey
+      extensions. This extension defines QueryAppInfo() function used
+      for querying information about installed applications. Sample
+      usage: QueryAppInfo -match "pattern" -first [$true|$false]
+    </description>
+    <projectUrl>https://github.com/michfield/devbox-choco</projectUrl>
+    <tags>devbox extension</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common.extension/Devbox-Common.extension.gif</iconUrl>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+</package>
