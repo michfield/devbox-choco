@@ -16,7 +16,7 @@
     <projectUrl>https://github.com/michfield/devbox-choco</projectUrl>
     <tags>devbox extension</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common.extension/Devbox-Common.extension.gif</iconUrl>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common.extension/Devbox-Common.extension.png</iconUrl>
     <releaseNotes>Initial release</releaseNotes>
   </metadata>
 </package>
