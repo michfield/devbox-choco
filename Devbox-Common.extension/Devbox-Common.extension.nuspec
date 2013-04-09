@@ -3,7 +3,7 @@
   <metadata>
     <id>Devbox-Common.extension</id>
     <title>Devbox Common Extension</title>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <authors>Michael Field</authors>
     <owners>Michael Field</owners>
     <summary>Helper Functions packed as Chocolatey extension</summary>
@@ -17,6 +17,6 @@
     <tags>devbox extension</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common.extension/Devbox-Common.extension.png</iconUrl>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Fix typo in icon file URL</releaseNotes>
   </metadata>
 </package>
