@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-VirtualBox</id>
+    <title>Devbox VirtualBox</title>
+    <version>4.2.10</version>
+    <authors>Oracle Corporation, Innotek</authors>
+    <owners>Michael Field</owners>
+    <summary>VirtualBox is a cross-platform virtualization application.</summary>
+    <description>
+      Oracle VM VirtualBox is a general-purpose full virtualizer for
+      hardware. Targeted at server, desktop and embedded use, Oracle VM
+      VirtualBox is now the only professional-quality virtualization
+      solution that is also Open Source Software.
+    </description>
+    <projectUrl>https://www.virtualbox.org/</projectUrl>
+    <tags>devbox admin virtualbox virtualization</tags>
+    <copyright></copyright>
+    <licenseUrl>https://www.virtualbox.org/wiki/VirtualBox_PUEL</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-VirtualBox/Devbox-VirtualBox.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-Common" version="0.2.0" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
