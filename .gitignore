@@ -2,3 +2,6 @@
 #
 *.sublime-project
 *.sublime-workspace
+
+# Finished NuGet packages
+*.nupkg
