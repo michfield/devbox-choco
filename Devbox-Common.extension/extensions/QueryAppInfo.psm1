@@ -60,18 +60,6 @@ function QueryAppInfo([string] $matchPattern = '', [bool] $firstOnly = $false)
                 continue
             }
 
-            # Convert the date from yyyymmdd to system format (to display)
-            #
-            if ($tmpDate = $key.GetValue("InstallDate"))
-            {
-                $tmpDate = $tmpDate.SubString(4,2) + "/" + $tmpDate.SubString(6,2) + "/" + $tmpDate.SubString(0,4)
-            }
-
-            # [ref]$ParsedInstallDate = Get-Date
-            # If ([DateTime]::TryParseExact($SubKey.GetValue("InstallDate"),"yyyyMMdd",$Null,[System.Globalization.DateTimeStyles]::None,$ParsedInstallDate)){
-            # $Entry.InstallDate = $ParsedInstallDate.Value
-            # }
-
             # Convert estimated size to megabytes
             #
             $tmpSize = '{0:N2}' -f ($key.GetValue("EstimatedSize") / 1MB)
@@ -82,10 +70,13 @@ function QueryAppInfo([string] $matchPattern = '', [bool] $firstOnly = $false)
             $app["DisplayVersion"]         = $key.GetValue("DisplayVersion")
             $app["Publisher"]              = $key.GetValue("Publisher")                # Company / InnoSetup: yes, MSI: yes
             $app["InstallLocation"]        = $key.GetValue("InstallLocation")          # / InnoSetup: yes, MSI: sometimes empty
-            $app["InstallDate"]            = $tmpDate                                  # yyyymmdd / InnoSetup: yes, MSI: yes
+            $app["InstallDate"]            = $key.GetValue("InstallDate")              # yyyymmdd / InnoSetup: yes, MSI: yes
             $app["UninstallString"]        = $key.GetValue("UninstallString")          # / InnoSetup: yes, MSI: yes
             $app["QuietUninstallString"]   = $key.GetValue("QuietUninstallString")     # / InnoSetup: yes, MSI: no
             $app["EstimatedSizeMB"]        = $tmpSize                                  # / InnoSetup: yes, MSI: yes
+
+            $app["RegistryPath"]           = $key.name
+            $app["RegistryKeyName"]        = $key.pschildname
 
             # If it has keys that start with `Inno Setup:`, like `Inno
             # Setup: App Path` or `Inno Setup: Selected Tasks`, then we have
