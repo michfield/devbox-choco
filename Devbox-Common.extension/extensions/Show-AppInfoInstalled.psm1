@@ -13,7 +13,7 @@
 #   Colovic Vladan, cvladan@gmail.com
 #
 
-function Show-AppInfoInstalled {
+function Show-AppUninstallInfo {
 param(
     [string] $matchPattern = '',
     [string] $ignorePattern = '',
