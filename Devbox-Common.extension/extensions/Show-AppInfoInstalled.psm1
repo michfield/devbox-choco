@@ -203,7 +203,7 @@ param(
         Write-Host "* If package is installed, uninstall it by typing:" -foregroundcolor darkgray
         Write-Host "  cuninst pkgname"
         Write-Host ""
-        Write-Host "Also, you can execute preffered Chocolatey method, that will trigger silent uninstallation:" -nonewline
+        Write-Host "Also, you can execute preffered Chocolatey method, that will trigger silent uninstallation:"
         Write-Host ""
         Write-Host "cuninst $pkgName"  -foregroundcolor yellow
         Write-Host ""
