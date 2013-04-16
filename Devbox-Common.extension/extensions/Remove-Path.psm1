@@ -73,6 +73,6 @@ param(
 # Cleanup PATH variable.
 # Don't check the real existence of PATH part on disk
 #
-function Optimize-Path {
+function Set-PathCleanup {
     Remove-Path
 }

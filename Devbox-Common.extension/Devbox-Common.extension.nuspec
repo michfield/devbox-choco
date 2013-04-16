@@ -3,20 +3,21 @@
   <metadata>
     <id>Devbox-Common.extension</id>
     <title>Devbox Common Extension</title>
-    <version>0.2.0</version>
+    <version>0.2.2</version>
     <authors>Michael Field</authors>
     <owners>Michael Field</owners>
     <summary>Helper Functions packed as Chocolatey extension</summary>
     <description>
-      This package contains helper functions installed as Chocolatey
-      extensions. This extension defines QueryAppInfo() function used
-      for querying information about installed applications. Sample
-      usage: QueryAppInfo -match "pattern" -first [$true|$false]
+      Package contains a lot of helper functions installed as Chocolatey
+      extensions. Some of a newly defined functions are: Show-
+      AppUninstallInfo, Stop-OnAppIsInstalled, Remove-Path, Set-
+      PathCleanup, Remove-EnvironmentVariable, Get-RootPath, Find-
+      FilenameInPath, Test-FilenameInPath, etc.
     </description>
     <projectUrl>https://github.com/michfield/devbox-choco</projectUrl>
     <tags>devbox extension</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common.extension/Devbox-Common.extension.png</iconUrl>
-    <releaseNotes>Fix typo in icon file URL</releaseNotes>
+    <releaseNotes>Added Get-RootPath helper</releaseNotes>
   </metadata>
 </package>
