@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-Vagrant</id>
+    <title>Devbox-Vagrant</title>
+    <version>1.1.5</version>
+    <authors>Mitchell Hashimoto, John Bender</authors>
+    <owners>Michael Field</owners>
+    <summary>Vagrant is a tool for building and distributing virtualized development environments.</summary>
+    <description>
+      Vagrant is a tool for building complete development environments.
+      With an easy-to-use workflow and focus on automation, Vagrant
+      lowers development environment setup time, increases
+      development/production parity, and makes the "works on my machine"
+      excuse a relic of the past.
+    </description>
+    <projectUrl>http://www.vagrantup.com/</projectUrl>
+    <tags>devbox admin vagrant virtualization</tags>
+    <copyright>Copyright (c) 2010-2013 Mitchell Hashimoto</copyright>
+    <licenseUrl>https://github.com/mitchellh/vagrant/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Vagrant/Devbox-Vagrant.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-VirtualBox"/>
+    </dependencies>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+
