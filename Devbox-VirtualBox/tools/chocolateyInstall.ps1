@@ -1,20 +1,17 @@
 ﻿$packageName = "Devbox-VirtualBox" # filename-safe value
 $installerType = "exe"
-$url = "http://download.virtualbox.org/virtualbox/4.2.10/VirtualBox-4.2.10-84105-Win.exe"
+$url = "http://download.virtualbox.org/virtualbox/4.2.12/VirtualBox-4.2.12-84980-Win.exe"
 $url64 = $url
 $silentArgs = "-silent"
 $validExitCodes = @(0)
 
-# Debug recommended:
-Set-StrictMode –version Latest
+# Debug recommend
+# Set-StrictMode –version Latest
 
-# Exit if software is already installed, except if forced
-# by `cinst -force` command line option
+# Exit if software is already installed,
+# except if forced with `cinst -force` command line option
 #
-Stop-OnAppIsInstalled -pkg $packageName
-        -match "Oracle VM VirtualBox" `
-        -ignore "Oracle VM VirtualBox Guest Additions" `
-        -force $force
+Stop-OnAppIsInstalled -pkg $packageName -match "Oracle VM VirtualBox" -ignore "Oracle VM VirtualBox Guest Additions" -force $force
 
 try {
 

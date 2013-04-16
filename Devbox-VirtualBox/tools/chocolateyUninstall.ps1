@@ -14,10 +14,11 @@
 $packageName = "Devbox-VirtualBox"
 
 # Note: Strangely, full application name in registry contains
-# both the name and version (Oracle VM VirtualBox 4.2.10).
+# both the name and version (Oracle VM VirtualBox 4.2.12).
 #
 # GUID list:
 #   * v4.2.10 -> {E28F112D-4784-4466-AE4B-07B3630C857F}
+#   * v4.2.12 -> {unknown}
 #
 #
 # Also, we can find ut a lot of information from this registry key:
