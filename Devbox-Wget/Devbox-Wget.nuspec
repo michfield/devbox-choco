@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-Wget</id>
+    <title>Devbox GNU Wget</title>
+    <version>1.11.4.1</version>
+    <authors>Hrvoje Niksic, Giuseppe Scrivano</authors>
+    <owners>Michael Field</owners>
+    <summary>Wget - retrieve files from the WWW.</summary>
+    <description>
+      GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive command-line tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc. GNU Wget has many features to make retrieving large files or mirroring entire web or FTP sites easy.
+      This package installs GNU Wget in C:\Program Files\Tools directory, both on x86 and x64 systems.
+    </description>
+    <projectUrl>http://gnuwin32.sourceforge.net/packages/wget.htm</projectUrl>
+    <tags>devbox admin wget</tags>
+    <copyright>Copyright © 2010 Free Software Foundation, Inc.</copyright>
+    <licenseUrl>http://gnuwin32.sourceforge.net/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Wget/Devbox-Wget.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-Common"/>
+    </dependencies>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+
