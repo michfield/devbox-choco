@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-RapidEE</id>
+    <title>Devbox-RapidEE</title>
+    <version>0.0.0</version>
+    <authors>Oleg Danilov</authors>
+    <owners>Michael Field</owners>
+    <summary>Rapid Environment Editor (RapidEE) is an environment variables editor.</summary>
+    <description>
+      Rapid Environment Editor is primarily command line tool, but it
+      includes easy to use GUI that replaces small and inconvenient
+      Windows environment edit box. This Devbox-RapidEE package always
+      installs the latest version that is available online. According to
+      this package version number is marked as 0.0.0, on purpose.
+    </description>
+    <projectUrl>http://www.rapidee.com/</projectUrl>
+    <tags>devbox admin rapidee</tags>
+    <copyright>Copyright (c) 2010-2013 Oleg Danilov. All rights reserved.</copyright>
+    <licenseUrl>http://www.rapidee.com/en/license</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-RapidEE/Devbox-RapidEE.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-Common"/>
+    </dependencies>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+
