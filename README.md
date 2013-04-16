@@ -20,7 +20,7 @@ I decided to use more appropriate subdirectory - I want it to be
 installed in `C:\Tools\Choco` and later we will install all the Linux-
 like applications in sub-folders under `C:\Tools`.
 
-To force that installation directory, you must set a environment
+To force that installation directory, we must set an environment
 variable `ChocolateyInstall`, so this is our complete copy-paste
 installation sequence:
 
@@ -50,6 +50,12 @@ Command examples are shown for package named __Devbox-Vagrant__.
 
 ##### Search for a package
 
+Lists packages available from a remote source, containing word-phrase.
+
+    clist vagrant
+
+##### Information about a package
+
     cver Devbox-Vagrant
 
 ##### Uninstall a package
@@ -64,7 +70,7 @@ or even shorter:
 
     cver all -lo
 
-## Complete Devbox install
+## Install Devbox stack
 
     :: We assume that Choco is already installed
     cinst Devbox-Common.extension
@@ -72,6 +78,10 @@ or even shorter:
     cinst Devbox-VirtualBox
     cinst Devbox-Vagrant
     :: Now exit and re-enter command shell 
+
+## Install Devbox optional components
+
+    cinst Devbox-RapidEE
 
 ## Conclusion
 
