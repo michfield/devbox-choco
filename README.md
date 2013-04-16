@@ -42,20 +42,19 @@ patient. Chocolatey should automatically and permanently set
 
 ## Basic package manipulation
 
-I will write an examples for package __CpuIO__ whose full name is
-`net.sourceforge.gnuwin32.Cpuid` and short-name is `Cpuid`.
+Command examples are shown for package named __Devbox-Vagrant__.
 
 ##### Installing packages
 
-    cinst packageName
+    cinst Devbox-Vagrant
 
 ##### Search for a package
 
-    cver packageName
+    cver Devbox-Vagrant
 
 ##### Uninstall a package
 
-    cuninst packageName
+    cuninst Devbox-Vagrant
 
 ##### List installed packages
 
@@ -64,6 +63,15 @@ I will write an examples for package __CpuIO__ whose full name is
 or even shorter:
 
     cver all -lo
+
+## Complete Devbox install
+
+    :: We assume that Choco is already installed
+    cinst Devbox-Common.extension
+    cinst Devbox-Common
+    cinst Devbox-VirtualBox
+    cinst Devbox-Vagrant
+    :: Now exit and re-enter command shell 
 
 ## Conclusion
 
