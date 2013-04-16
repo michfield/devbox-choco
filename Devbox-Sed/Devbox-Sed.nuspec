@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-Sed</id>
+    <title>Devbox GNU SEd</title>
+    <version>4.2.1</version>
+    <authors>Lee E. McMahon</authors>
+    <owners>Michael Field</owners>
+    <summary>SEd (stream editor) is a Unix utility that parses and transforms text.</summary>
+    <description>
+      SEd (stream editor) isn't an interactive text editor. Instead, it is used to filter text, i.e., it takes text input, performs some operation or set of operations on it, and outputs the modified text. SEd is typically used for extracting part of a file using pattern matching or substituting multiple occurrences of a string within a file.
+      This package installs GNU SEd in C:\Program Files\Tools directory, both on x86 and x64 systems.
+    </description>
+    <projectUrl>http://gnuwin32.sourceforge.net/packages/sed.htm</projectUrl>
+    <tags>devbox admin sed gnu</tags>
+    <copyright>Copyright © 1998, 1999, 2001, 2002, 2003, 2004 Free Software Foundation, Inc.</copyright>
+    <licenseUrl>http://gnuwin32.sourceforge.net/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Sed/Devbox-Sed.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-Common"/>
+    </dependencies>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+
