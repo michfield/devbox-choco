@@ -3,21 +3,28 @@
   <metadata>
     <id>Devbox-Common.extension</id>
     <title>Devbox Common Extension</title>
-    <version>0.2.2</version>
+    <version>0.2.3</version>
     <authors>Michael Field</authors>
     <owners>Michael Field</owners>
     <summary>Helper Functions packed as Chocolatey extension</summary>
     <description>
-      Package contains a lot of helper functions installed as Chocolatey
-      extensions. Some of a newly defined functions are: Show-
-      AppUninstallInfo, Stop-OnAppIsInstalled, Remove-Path, Set-
-      PathCleanup, Remove-EnvironmentVariable, Get-RootPath, Find-
-      FilenameInPath, Test-FilenameInPath, etc.
+
+      Package contains a helper functions installed as Chocolatey extensions. These functions are used by other Devbox-Common installers. Let's present you some of a newly defined functions are:
+
+      * Show-AppUninstallInfo
+      * Stop-OnAppIsInstalled
+      * Remove-Path
+      * Set-PathCleanup
+      * Remove-EnvironmentVariable
+      * Get-RootPath
+      * Find-FileInEnvPath
+      * Test-FileInEnvPath, etc.
+
     </description>
     <projectUrl>https://github.com/michfield/devbox-choco</projectUrl>
     <tags>devbox extension</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common.extension/Devbox-Common.extension.png</iconUrl>
-    <releaseNotes>Added Get-RootPath helper</releaseNotes>
+    <releaseNotes>Improve ...FileInPath... functions</releaseNotes>
   </metadata>
 </package>
