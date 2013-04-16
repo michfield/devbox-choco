@@ -5,35 +5,32 @@ $pkgName = 'Devbox-Common'
 
 try
 {
-  $varName = 'chocolatey_bin_root'
+    # Helper function that updates current environment based on settings
+    # in registry, thus avoiding a need for session restart
+    #
+    Update-SessionEnvironment
 
-  # Helper function that updates current environment based on settings
-  # in registry, thus avoiding a need for session restart
-  #
-  Update-SessionEnvironment
+    $chocoBinRoot = 'chocolatey_bin_root'
 
-  # Set variable only if empty
-  #
-  $varValue = Get-Item Env:$varName -ErrorAction SilentlyContinue | Select -ExpandProperty Value -First 1
+    # Set variable only if not set
+    #
+    if (-not (Test-Path Env:\$chocoBinRoot)) {
 
-  if ($varValue)
-  {
-    Write-Host "Doing nothing. Environment variable is already set: $varName = $varValue"
-  }
-  else {
+        $binrootPath = Join-Path $Env:SystemDrive '\Tools'
+        Install-ChocolateyEnvironmentVariable $chocoBinRoot $binrootPath
+    }
 
-    $varValue = Join-Path $Env:SystemDrive '\Tools'
+    # Setting HOME variable only if not set
+    #
+    if (-not (Test-Path Env:\Home)) {
+        $homePath = Join-Path $Env:HomeDrive $Env:HomePath
+        Install-ChocolateyEnvironmentVariable "Home" $homePath
+    }
 
-    [Environment]::SetEnvironmentVariable($varName, $varValue, 'User')
-    Set-Content Env:\$varName $varValue
-
-    Write-Host "Configured environment variable: $varName = $varValue"
-  }
-
-  Write-ChocolateySuccess "$pkgName"
+    Write-ChocolateySuccess "$pkgName"
 }
 catch
 {
-  Write-ChocolateyFailure "$pkgName" "$($_.Exception.Message)"
-  throw
+    Write-ChocolateyFailure "$pkgName" "$($_.Exception.Message)"
+    throw
 }

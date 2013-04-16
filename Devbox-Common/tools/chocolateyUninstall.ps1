@@ -2,28 +2,27 @@ $pkgName = 'Devbox-Common'
 
 try
 {
-  $varName = 'chocolatey_bin_root'
+    # Propagate environment to a current session
+    Update-SessionEnvironment
 
-  Update-SessionEnvironment
+    $chocoBinRoot = 'chocolatey_bin_root'
 
-  # Remove variable if not empty
-  #
-  $varValue = Get-Item Env:$varName -ErrorAction SilentlyContinue | Select -ExpandProperty Value -First 1
+    # Remove variable if not empty
+    #
+    if (Test-Path Env:\$chocoBinRoot) {
 
-  if ($varValue)
-  {
-    [Environment]::SetEnvironmentVariable($varName, $null, 'User')
-    Remove-Item Env:\$varName
+        [Environment]::SetEnvironmentVariable($chocoBinRoot, $Null, 'User')
+        Remove-Item Env:\$chocoBinRoot
 
-    Write-Host "Removed environment variable: $varName, value was: $varValue"
-  }
+        Write-Host "Removed environment variable `'$chocoBinRoot`'"
+    }
 
-  Write-ChocolateySuccess "$pkgName"
+    Write-ChocolateySuccess "$pkgName"
 }
 catch
 {
-  Write-ChocolateyFailure "$pkgName" "$($_.Exception.Message)"
-  throw
+    Write-ChocolateyFailure "$pkgName" "$($_.Exception.Message)"
+    throw
 }
 
 
