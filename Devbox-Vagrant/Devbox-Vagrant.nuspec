@@ -8,11 +8,9 @@
     <owners>Michael Field</owners>
     <summary>Vagrant is a tool for building and distributing virtualized development environments.</summary>
     <description>
-      Vagrant is a tool for building complete development environments.
-      With an easy-to-use workflow and focus on automation, Vagrant
-      lowers development environment setup time, increases
-      development/production parity, and makes the "works on my machine"
-      excuse a relic of the past.
+      Vagrant is a tool for building complete development environments. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases development/production parity, and makes the "works on my machine" excuse a relic of the past.
+      This package installs Vagrant inside Chocolatey's binroot directory.
+      NOTE: This package contains a valid uninstall procedure, so you don't need to manually reverse whatever actions installer did.
     </description>
     <projectUrl>http://www.vagrantup.com/</projectUrl>
     <tags>devbox admin vagrant virtualization</tags>
