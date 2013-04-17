@@ -13,7 +13,7 @@ Stop-OnAppIsInstalled -pkg $packageName -match "Vagrant" -force $force
 try {
 
     $installPath = join-path $(Get-RootPath) "Vagrant"
-    $silentArgs = "/passive INSTALLDIR=`"$installPath`""
+    $silentArgs = "/passive VAGRANTAPPDIR=`"$installPath`""
 
     # Install package.
     # Vagrant should add itself to the PATH

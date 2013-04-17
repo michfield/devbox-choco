@@ -9,7 +9,7 @@
     <summary>Vagrant is a tool for building and distributing virtualized development environments.</summary>
     <description>
       Vagrant is a tool for building complete development environments. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases development/production parity, and makes the "works on my machine" excuse a relic of the past.
-      This package installs Vagrant inside Chocolatey's binroot directory.
+      By default, latest Vagrant version wants to install itself in C:\Program Files (x86)\HashiCorp\Vagrant\. Given the history of problems with Vagrant and Ruby in using directories with spaces in names, we will use another directory. Therefore, this package installs Vagrant inside Chocolatey's binroot directory, typically C:\Tools\Vagrant.
       NOTE: This package contains a valid uninstall procedure, so you don't need to manually reverse whatever actions installer did.
     </description>
     <projectUrl>http://www.vagrantup.com/</projectUrl>
