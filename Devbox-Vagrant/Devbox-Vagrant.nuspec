@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Devbox-Vagrant</id>
-    <title>Devbox-Vagrant</title>
+    <title>Devbox Vagrant</title>
     <version>1.1.5</version>
     <authors>Mitchell Hashimoto, John Bender</authors>
     <owners>Michael Field</owners>

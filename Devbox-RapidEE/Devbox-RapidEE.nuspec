@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Devbox-RapidEE</id>
-    <title>Devbox-RapidEE</title>
+    <title>Devbox RapidEE</title>
     <version>0.0.0</version>
     <authors>Oleg Danilov</authors>
     <owners>Michael Field</owners>
