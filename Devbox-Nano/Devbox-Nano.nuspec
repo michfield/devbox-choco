@@ -3,13 +3,14 @@
   <metadata>
     <id>Devbox-Nano</id>
     <title>Devbox GNU Nano</title>
-    <version>2.2.6</version>
+    <version>2.2.6.20130417</version>
     <authors>Chris Allegretta</authors>
     <owners>Michael Field</owners>
     <summary>Nano (as in: Nano is ANOther editor), an enhanced and free Pico text editor clone.</summary>
     <description>
       Nano is a text editor for operating environments using a command line interface. It emulates the Pico text editor and also provides additional functionality. Nano is, in contrast to Pico, licensed under the GNU General Public License. Today, nano is part of the GNU Project.
-      This package installs GNU Nano into Chocolatey's lib directory.
+      GNU Nano application is installed into Chocolatey's binroot directory.
+      NOTE: This package contains a valid uninstall procedure, so you don't need to manually reverse whatever actions installer did.
     </description>
     <projectUrl>http://www.nano-editor.org/</projectUrl>
     <tags>devbox admin nano editor gnu</tags>
@@ -20,7 +21,7 @@
     <dependencies>
       <dependency id="Devbox-Common"/>
     </dependencies>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Mostly cosmetic changes and a new custom icon</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
