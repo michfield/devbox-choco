@@ -1,6 +1,6 @@
 ﻿$packageName = "Devbox-Vagrant"
 $installerType = "msi"
-$url = "http://files.vagrantup.com/packages/64e360814c3ad960d810456add977fd4c7d47ce6/Vagrant.msi"
+$url = "http://files.vagrantup.com/packages/a7853fe7b7f08dbedbc934eb9230d33be6bf746f/Vagrant_1.2.1.msi"
 $url64 = $url
 $validExitCodes = @(0)
 

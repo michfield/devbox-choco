@@ -1,9 +1,5 @@
 $packageName = "Devbox-Vagrant"
 
-# GUID list:
-#   * v1.1.5 -> {unknown}
-#
-
 Update-SessionEnvironment
 
 # Uninstall any version of Vagrant
