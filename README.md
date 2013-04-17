@@ -81,7 +81,13 @@ or even shorter:
 
 ## Install Devbox optional components
 
+    cinst Devbox-Wget
+    cinst Devbox-Sed
+    cinst Devbox-UnZip
     cinst Devbox-RapidEE
+    cinst Devbox-Nano
+    cinst Devbox-VCRedist2010
+    cinst Devbox-Clink
 
 ## Conclusion
 
