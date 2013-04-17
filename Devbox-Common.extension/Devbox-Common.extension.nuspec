@@ -3,7 +3,7 @@
   <metadata>
     <id>Devbox-Common.extension</id>
     <title>Devbox Common Extension</title>
-    <version>0.2.3</version>
+    <version>0.2.4</version>
     <authors>Michael Field</authors>
     <owners>Michael Field</owners>
     <summary>Helper Functions packed as Chocolatey extension</summary>
@@ -20,11 +20,14 @@
       * Find-FileInEnvPath
       * Test-FileInEnvPath, etc.
 
+      NOTE: This package contains a valid automatic uninstall procedure, so you don't need to manually reverse whatever actions installer did.
+      NOTE: Devbox phrase in a name of this package is used as signature to indicate high quality standards. Functionally the package is a standard Chocolatey package, as any other package.
+
     </description>
     <projectUrl>https://github.com/michfield/devbox-choco</projectUrl>
     <tags>devbox extension</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common.extension/Devbox-Common.extension.png</iconUrl>
-    <releaseNotes>Improve ...FileInPath... functions</releaseNotes>
+    <releaseNotes>Fixing bugs</releaseNotes>
   </metadata>
 </package>

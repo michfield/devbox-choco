@@ -15,7 +15,7 @@ param(
     [string] $fileName,
     [string] $multiPath
 )
-    $multiPath.Split(';') | ?{!([System.String]::IsNullOrEmpty($_))} | %{
+    $multiPath.Split(';')  | Select-Object -unique | ?{!([System.String]::IsNullOrEmpty($_))} | %{
         if (Test-Path $_) {
             ls $_ | ?{ $_.Name -like $fileName } | Select-Object -ExpandProperty Fullname -first 1
         }
