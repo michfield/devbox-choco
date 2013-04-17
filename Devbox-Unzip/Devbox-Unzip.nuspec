@@ -16,7 +16,7 @@
     <copyright>Copyright (c) 1990-2009 Info-ZIP. All rights reserved.</copyright>
     <licenseUrl>http://www.info-zip.org/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Sed/Devbox-Sed.png</iconUrl>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Unzip/Devbox-Unzip.png</iconUrl>
     <dependencies>
       <dependency id="Devbox-Common"/>
     </dependencies>
