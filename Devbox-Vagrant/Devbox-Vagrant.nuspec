@@ -3,7 +3,7 @@
   <metadata>
     <id>Devbox-Vagrant</id>
     <title>Devbox Vagrant</title>
-    <version>1.2.1</version>
+    <version>1.2.1.20130417</version>
     <authors>Mitchell Hashimoto, John Bender</authors>
     <owners>Michael Field</owners>
     <summary>Vagrant is a tool for building and distributing virtualized development environments.</summary>
