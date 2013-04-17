@@ -48,7 +48,6 @@ param(
     # application information
     #
     $appArray = @()
-    $app = @{}
 
     # This is the real magic of the script. We use Get-ChildItem to
     # get all of the sub-keys that contain application info.
@@ -92,7 +91,9 @@ param(
             $tmpSize = '{0:N2}' -f ($key.GetValue("EstimatedSize") / 1MB)
 
             # Populate our object
+            # We must initialize object here, not outside loop
             #
+            $app = @{}
             $app["DisplayName"]            = $packageName                              # Name / InnoSetup: yes, MSI: yes
             $app["DisplayVersion"]         = $key.GetValue("DisplayVersion")
             $app["Publisher"]              = $key.GetValue("Publisher")                # Company / InnoSetup: yes, MSI: yes
