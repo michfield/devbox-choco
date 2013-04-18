@@ -3,16 +3,14 @@
   <metadata>
     <id>Devbox-RapidEE</id>
     <title>Devbox RapidEE</title>
-    <version>0.0.0</version>
+    <version>0.0.0.20130417</version>
     <authors>Oleg Danilov</authors>
     <owners>Michael Field</owners>
     <summary>Rapid Environment Editor (RapidEE) is an environment variables editor.</summary>
     <description>
-      Rapid Environment Editor is primarily command line tool, but it
-      includes easy to use GUI that replaces small and inconvenient
-      Windows environment edit box. This Devbox-RapidEE package always
-      installs the latest version that is available online. According to
-      this package version number is marked as 0.0.0, on purpose.
+      Rapid Environment Editor is primarily command line tool, but it includes easy to use GUI that replaces small and inconvenient Windows environment edit box. This Devbox-RapidEE package always installs the latest version that is available online. According to this package version number is marked as 0.0.0, on purpose.
+      NOTE: This package contains a valid automatic uninstall procedure, so you don't need to manually reverse whatever actions installer did.
+      NOTE: Devbox phrase in a name of this package is used as signature to indicate high quality standards. Functionally, the package is a standard Chocolatey package, same as any other package.
     </description>
     <projectUrl>http://www.rapidee.com/</projectUrl>
     <tags>devbox admin rapidee</tags>
