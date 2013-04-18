@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-ConEmu</id>
+    <title>Devbox ConEmu</title>
+    <version>0.0.0</version>
+    <authors>Xavier Decoster</authors>
+    <owners>Michael Field</owners>
+    <summary>ConEmu-Maximus5 is a Windows console emulator with tabs.</summary>
+    <description>
+      ConEmu (short for Console Emulator) is a console window (terminal emulator) and tabbed environment for Windows. ConEmu presents multiple consoles and simple GUI applications as one customizable GUI window with tabs, a status bar and other features.
+      This package always installs the latest version available online. Therefore, package version number is marked as 0.0.0
+      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
+    </description>
+    <projectUrl>http://code.google.com/p/conemu-maximus5/</projectUrl>
+    <tags>devbox admin console cmd tabs guake</tags>
+    <copyright>Copyright (c) 2010, Maximus5</copyright>
+    <licenseUrl>http://opensource.org/licenses/bsd-license.php</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-ConEmu/Devbox-ConEmu.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-Common"/>
+    </dependencies>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
