@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-Notepad2</id>
+    <title>Devbox Notepad2</title>
+    <version>4.2.25</version>
+    <authors>Florian Balmer</authors>
+    <owners>Michael Field</owners>
+    <summary>A fast and extremly light-weight Notepad-like text editor with syntax highlighting.</summary>
+    <description>
+      Notepad2 is a light-weight (only ~350 KB), free and open source Notepad-like text editor with syntax highlighting for a few commonly used languages. It's based on the Scintilla source code editing component and works on NT-based versions of Windows.
+      Features: Syntax highlighting, Basic regular expression search and replace, Rectangular selection (Alt+Mouse), Support for Unicode, UTF-8, Unix and Mac text files
+      NOTE: Notepad2 installs itself by replacing regular Notepad. Therefore launching Notepad2 is the same as executing Notepad.
+      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
+    </description>
+    <projectUrl>http://www.flos-freeware.ch/notepad2.html</projectUrl>
+    <tags>devbox notepad notepad2</tags>
+    <copyright>(c) Florian Balmer 2004-2011</copyright>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Notepad2/Devbox-Notepad2.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-Common"/>
+    </dependencies>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+
