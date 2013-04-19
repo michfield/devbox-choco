@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-GitFlow</id>
+    <title>Devbox Git-Flow</title>
+    <version>0.0.0</version>
+    <authors>Vincent Driessen</authors>
+    <owners>Michael Field</owners>
+    <summary>A collection of Git extensions to provide high-level repository operations.</summary>
+    <description>
+      Git-Flow is a collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model.
+
+      Package includes required prerequisites for Git-Flow like files «getopt.exe» and «libintl3.dll» from GnuWin32's «util-linux-ng-2.14.1» package.
+
+      This package always installs the latest version available online. Therefore, package version number is marked as 0.0.0
+      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
+    </description>
+    <projectUrl>https://github.com/nvie/gitflow</projectUrl>
+    <tags>devbox vcs scm git gitflow git-flow getopt</tags>
+    <copyright>Copyright: Copyright 2010 Vincent Driessen. All rights reserved.</copyright>
+    <licenseUrl>https://github.com/nvie/gitflow/blob/develop/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-GitFlow/Devbox-GitFlow.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-Common"/>
+    </dependencies>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="bin\**" target="bin" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

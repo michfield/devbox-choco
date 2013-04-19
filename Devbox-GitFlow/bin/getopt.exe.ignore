@@ -1,0 +1,2 @@
+Because of this file, Chocolatey will exclude executable from getting batch redirect.
+See: https://github.com/chocolatey/chocolatey/wiki/CreatePackages#how-do-i-exclude-executables-from-getting-batch-redirects
