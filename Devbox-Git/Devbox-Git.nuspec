@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-Git</id>
+    <title>Devbox Git</title>
+    <version>1.8.1.2</version>
+    <authors>Johannes Schindelin, msysgit Committers</authors>
+    <owners>Michael Field</owners>
+    <summary>Git is a powerful version control system aiming to be the fastest decentralized source code management tool on this planet.</summary>
+    <description>
+      Git is a free and open source distributed version control and source code management (SCM) system designed to handle everything from small to very large projects with speed and efficiency.
+      Initially designed and developed by Linus Torvalds for Linux kernel development, Git has since been adopted by many other projects.
+      Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses other SCM tools with features like cheap local branching, convenient staging areas, and multiple workflows.
+
+      This package will also add Git (both \bin and \cmd) to PATH and set global Git configuration 'core.autocrlf' to false.
+
+      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
+    </description>
+    <projectUrl>http://msysgit.github.io/</projectUrl>
+    <tags>devbox vcs scm git version control msysgit</tags>
+    <copyright>Copyright (c) 2010, Maximus5</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Git/Devbox-Git.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-Common"/>
+    </dependencies>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
