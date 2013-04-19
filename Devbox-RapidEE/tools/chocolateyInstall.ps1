@@ -30,10 +30,9 @@ try {
     # Generate .bat shortcuts.
     # Due the bad installer, I have to search for an executable.
     #
-    $installPath1 = Join-Path "${env:ProgramFiles}"      "Rapid Environment Editor"
-    $installPath2 = Join-Path "${env:ProgramFiles(x86)}" "Rapid Environment Editor"
+    $dirs = Join-Path @("${env:ProgramFiles}","${env:ProgramFiles(x86)}") "Rapid Environment Editor"
+    $exe = Find-FileInPath "rapidee.exe" $($dirs -join ";")
 
-    $exe = Find-FileInPath "rapidee.exe" "$installPath1;$installPath2"
     if ($exe) {
         foreach ($alias in @("rapidee", "ree")) {
             Generate-BinFile "$alias" "$exe"
