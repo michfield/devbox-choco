@@ -68,15 +68,21 @@ param(
     #
     foreach ($key in $keys)
     {
+        # Adding a try-catch around the statement will hide the error and
+        # prevent it being caught in the main try / catch. And we are
+        # already silnetly continuing on errors
+        #
+        try { $pkgName = $key.GetValue("DisplayName") } catch {}
+
         # Only query data for apps with a name
         #
-        if ($packageName = $key.GetValue("DisplayName"))
+        if ($pkgName)
         {
-            $packageName = $packageName.Trim()
+            $pkgName = $pkgName.Trim()
 
-            if (($packageName.Length -eq 0) -or `
-                ($matchPattern -and ($packageName -notmatch $matchPattern)) -or `
-                ($ignorePattern -and ($packageName -match $ignorePattern)))
+            if (($pkgName.Length -eq 0) -or `
+                ($matchPattern -and ($pkgName -notmatch $matchPattern)) -or `
+                ($ignorePattern -and ($pkgName -match $ignorePattern)))
             {
                 # Move on if not match regular expression.
                 # It's case-insensitive comparison.
@@ -84,24 +90,30 @@ param(
                 continue
             }
 
-            Write-Debug "* $packageName"
+            Write-Debug "* $pkgName"
 
-            # Convert estimated size to megabytes
+            # Ignore every error
             #
-            $tmpSize = '{0:N2}' -f ($key.GetValue("EstimatedSize") / 1MB)
+            try {
 
-            # Populate our object
-            # We must initialize object here, not outside loop
-            #
-            $app = @{}
-            $app["DisplayName"]            = $packageName                              # Name / InnoSetup: yes, MSI: yes
-            $app["DisplayVersion"]         = $key.GetValue("DisplayVersion")
-            $app["Publisher"]              = $key.GetValue("Publisher")                # Company / InnoSetup: yes, MSI: yes
-            $app["InstallLocation"]        = $key.GetValue("InstallLocation")          # / InnoSetup: yes, MSI: sometimes empty
-            $app["InstallDate"]            = $key.GetValue("InstallDate")              # yyyymmdd / InnoSetup: yes, MSI: yes
-            $app["UninstallString"]        = $key.GetValue("UninstallString")          # / InnoSetup: yes, MSI: yes
-            $app["QuietUninstallString"]   = $key.GetValue("QuietUninstallString")     # / InnoSetup: yes, MSI: no
-            $app["EstimatedSizeMB"]        = $tmpSize                                  # / InnoSetup: yes, MSI: yes
+                # Convert estimated size to megabytes
+                #
+                $tmpSize = '{0:N2}' -f ($key.GetValue("EstimatedSize") / 1MB)
+
+                # Populate our object
+                # We must initialize object here, not outside loop
+                #
+                $app = @{}
+                $app["DisplayName"]            = $pkgName                                  # Name / InnoSetup: yes, MSI: yes
+                $app["DisplayVersion"]         = $key.GetValue("DisplayVersion")
+                $app["Publisher"]              = $key.GetValue("Publisher")                # Company / InnoSetup: yes, MSI: yes
+                $app["InstallLocation"]        = $key.GetValue("InstallLocation")          # / InnoSetup: yes, MSI: sometimes empty
+                $app["InstallDate"]            = $key.GetValue("InstallDate")              # yyyymmdd / InnoSetup: yes, MSI: yes
+                $app["UninstallString"]        = $key.GetValue("UninstallString")          # / InnoSetup: yes, MSI: yes
+                $app["QuietUninstallString"]   = $key.GetValue("QuietUninstallString")     # / InnoSetup: yes, MSI: no
+                $app["EstimatedSizeMB"]        = $tmpSize                                  # / InnoSetup: yes, MSI: yes
+
+            } catch {}
 
             $app["RegistryPath"]           = $key.name
             $app["RegistryKeyName"]        = $key.pschildname
@@ -143,7 +155,7 @@ param(
 # Returns nothing. Just breaks script execution, if needed.
 #
 # Usage:
-#   Stop-OnAppIsInstalled $packageName "Oracle VM VirtualBox"
+#   Stop-OnAppIsInstalled $pkgName "Oracle VM VirtualBox"
 #
 function Stop-OnAppIsInstalled {
 param(
