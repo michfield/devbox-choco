@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Devbox-P4Merge</id>
+    <title>Devbox P4Merge</title>
+    <version>131.61.1503</version>
+    <authors>Perforce Software Inc.</authors>
+    <owners>Michael Field</owners>
+    <summary>P4Merge: Visual Merge Tool. Provides graphical three-way merging and side-by-side file comparisons.</summary>
+    <description>
+      Visual merge and diff tool from Perforce - P4Merge - lets you visualize the differences between file versions. Color coding makes it easy to resolve conflicts that result from parallel or concurrent development.
+
+      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
+    </description>
+    <projectUrl>http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools</projectUrl>
+    <tags>devbox notepad merge diff git</tags>
+    <copyright>Copyright © 2013 Perforce. All rights reserved.</copyright>
+    <licenseUrl>http://www.perforce.com/downloads/terms-use</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-P4Merge/Devbox-P4Merge.png</iconUrl>
+    <dependencies>
+      <dependency id="Devbox-Common"/>
+    </dependencies>
+    <releaseNotes>Initial release</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
