@@ -25,6 +25,7 @@
     <releaseNotes>Add history alias .bat support</releaseNotes>
   </metadata>
   <files>
+    <file src="bin\**" target="bin" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
