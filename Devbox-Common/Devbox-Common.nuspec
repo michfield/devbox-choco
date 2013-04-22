@@ -3,29 +3,46 @@
   <metadata>
     <id>Devbox-Common</id>
     <title>Devbox Common Settings</title>
-    <version>0.2.2</version>
+    <version>0.2.3</version>
     <authors>Michael Field, Ethan Brown</authors>
     <owners>Michael Field</owners>
     <summary>Devbox-Common</summary>
     <description>
-      Set environment variable 'chocolatey_bin_root' to 'C:\Tools', only
-      if it's not already set. Some packages that would otherwise install
-      into system root will look for this variable. Packages that behave
-      in this way are: Ruby, Python etc - almost any package that is not
-      comfortable with spaces in filenames.
+      This package performs miscellaneous actions to customize your command line experience.
 
-      Also, this package sets HOME environment variable to a valid value.
+      1. Set environment variable « chocolatey_bin_root » to C:\Tools,
+         only if it's not already set. Some packages that would
+         otherwise install into system root will look for this variable.
+         Packages that behave in this way are: Ruby, Python etc - almost
+         any package that is not comfortable with spaces in filenames.
+
+      2. Permanently sets HOME environment variable to a valid value,
+         if not already set.
+
+      3. Installs « setenv » command that refreshes environment variables
+         without the need to restart command shell. Sometimes very useful.
+
+      4. Establishes a flexible system of auto-run include files, specified
+         in user's home directory. After that, any file residing in home
+         directory looking like « .bashrc.include.*.bat » gets
+         auto-executed at every command shell start.
+
+      Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did. This procedure will unset « chocolatey_bin_root » variable (1.) but will not do anything to remove effects of (2.), (3.) and (4.) because these settings are very unobtrusive.
+
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
+
     </description>
     <projectUrl>https://github.com/michfield/devbox-choco</projectUrl>
     <tags>devbox admin path binroot</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common/Devbox-Common.png</iconUrl>
     <dependencies>
-      <dependency id="Devbox-Common.extension" version="0.2.2" />
+      <dependency id="Devbox-Common.extension" version="0.2.5" />
     </dependencies>
-    <releaseNotes>Added check for HOME environment variable</releaseNotes>
+    <releaseNotes>Lot of improvements</releaseNotes>
   </metadata>
   <files>
+    <file src="bin\**" target="bin" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

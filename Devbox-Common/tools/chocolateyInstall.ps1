@@ -27,6 +27,67 @@ try
         Install-ChocolateyEnvironmentVariable "Home" $homePath
     }
 
+    # Setup auto-run system of `~\.bashrc.bat` and includes
+    #
+    $srcDir = $(Get-Item $(Split-Path -parent $MyInvocation.MyCommand.Definition)).parent.FullName | Join-Path -ChildPath "bin"
+    $homeDir = $Env:UserProfile
+
+    # Note the leading dot. I like it that way.
+    foreach ($fn in @("bashrc.bat", "bashrc.include.aliases-common.bat")) {
+        Copy-Item $(Join-Path $srcDir "$fn" ) $(Join-Path $homeDir ".$fn" ) -Force
+    }
+
+    $bashrc = ".bashrc.bat"
+    $bashrcFullPath = "$(join-path $homeDir $bashrc)"
+
+    $regKeyPath = "HKCU:\Software\Microsoft\Command Processor"
+    $regKeyProperty = "AutoRun"
+    $oldReg = (Get-ItemProperty $regKeyPath).$regKeyProperty
+    $newReg = ""
+
+    # Check if empty
+    if ($oldReg)
+    {
+        # Check for multiple values separated with `&&`
+        if ($oldReg.Contains('&&'))
+        {
+            $oldRegParts = $oldReg.Split('&&')
+
+            # Check each value for our file
+            ForEach ($part in $oldRegParts)
+            {
+                $part = $part.Trim()
+
+                if (!$part.ToLower().Contains($bashrc) -and ![string]::IsNullOrEmpty($part))
+                {
+                    $newReg += "$part `&`& "
+                }
+            }
+            $newReg += "`"$bashrcFullPath`""
+        }
+        else
+        {
+            if ($oldReg.ToLower().Contains($bashrc))
+            {
+                $newReg = "`"$bashrcFullPath`""
+            }
+            else
+            {
+                $newReg = "$oldReg `&`& `"$bashrcFullPath`""
+            }
+        }
+    }
+    else
+    {
+        $newReg = "`"$bashrcFullPath`""
+    }
+
+    Set-ItemProperty -Path "$regKeyPath" -Name "$regKeyProperty" -Value "$newReg" -Type string
+
+    # Last step - copy setenv.bat to chocolatey bin directory.
+    #
+    Copy-Item $(Join-Path $srcDir "setenv.bat" ) "$(Join-Path $Env:ChocolateyInstall "bin")" -Force
+
     Write-ChocolateySuccess "$pkgName"
 }
 catch
