@@ -3,13 +3,13 @@
   <metadata>
     <id>Devbox-ConEmu</id>
     <title>Devbox ConEmu</title>
-    <version>0.0.0</version>
+    <version>0.0.0.20130422</version>
     <authors>Xavier Decoster</authors>
     <owners>Michael Field</owners>
     <summary>ConEmu-Maximus5 is a Windows console emulator with tabs.</summary>
     <description>
       ConEmu (short for Console Emulator) is a console window (terminal emulator) and tabbed environment for Windows. ConEmu presents multiple consoles and simple GUI applications as one customizable GUI window with tabs, a status bar and other features.
-      This package always installs the latest version available online. Therefore, package version number is marked as 0.0.0
+      This package always installs the LATEST VERSION available online. Therefore, package version number is marked as 0.0.0
       NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
       NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
     </description>
