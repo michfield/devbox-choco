@@ -3,7 +3,7 @@
   <metadata>
     <id>Devbox-Git</id>
     <title>Devbox Git</title>
-    <version>1.8.1.2</version>
+    <version>1.8.1.20130422</version>
     <authors>Johannes Schindelin, msysgit Committers</authors>
     <owners>Michael Field</owners>
     <summary>Git is a powerful version control system aiming to be the fastest decentralized source code management tool on this planet.</summary>
@@ -12,8 +12,12 @@
       Initially designed and developed by Linus Torvalds for Linux kernel development, Git has since been adopted by many other projects.
       Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses other SCM tools with features like cheap local branching, convenient staging areas, and multiple workflows.
 
-      This package will also add Git (both \bin and \cmd) to PATH and set global Git configuration 'core.autocrlf' to false.
+      This package will also:
+      - add Git (both \bin and \cmd) to PATH
+      - set global Git configuration « core.autocrlf » to false
+      - fix message « WARNING: terminal is not fully functional » when running log or diff commands
 
+      NOTE: This is still Git version 1.8.1.2. This package has been improved from previous version so we needed to increase the version number from 1.8.1.2 to 1.8.1.20130420.
       NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
       NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
     </description>
@@ -26,7 +30,7 @@
     <dependencies>
       <dependency id="Devbox-Common"/>
     </dependencies>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Lot of improvements and fixes</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

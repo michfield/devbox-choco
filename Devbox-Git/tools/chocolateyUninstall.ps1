@@ -30,6 +30,17 @@ try
         }
     }
 
+    # Removing TERM environment variable is not critical - maybe it's
+    # even useful for other apps, so I will just leave it hanging in
+    # environment
+
+    # Leftover from auto-run system - see Devbox-Common
+    foreach ($fn in @(".bashrc.include.aliases-ls.bat",".bashrc.include.aliases-git.bat"))
+    {
+        $bat = Join-Path $env:UserProfile $fn
+        if (Test-Path "$bat") { Remove-Item "$bat" -ErrorAction SilentlyContinue }
+    }
+
     Write-ChocolateySuccess "$pkg"
 }
 catch

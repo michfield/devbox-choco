@@ -40,6 +40,28 @@ try {
         #
         # Make GIT core.autocrlf false
         & "$env:comspec" '/c git config --global core.autocrlf false'
+
+    }
+
+    # Setting TERM variable only if not set
+    #
+    # There is a strange message saying `WARNING: terminal is not
+    # fully functional` warning when starting Git log or diff
+    # commands. The solution is to set environment variable `TERM`
+    # to any valid value. If not set, on Windows it defaults to
+    # `winansi`, and that's the one that Git doesn't like. So I must
+    # set to anything else - any of the following: `cygwin`,
+    # `vt100`, `msys`, `linux`.
+    #
+    if (-not (Test-Path Env:\Term)) {
+        Install-ChocolateyEnvironmentVariable "TERM" "linux"
+    }
+
+    # Auto-run system supported - see Devbox-Common package
+    $srcDir = $(Get-Item $(Split-Path -parent $MyInvocation.MyCommand.Definition)).parent.FullName | Join-Path -ChildPath "bin"
+    foreach ($fn in @("bashrc.include.aliases-ls.bat","bashrc.include.aliases-git.bat"))
+    {
+        Copy-Item $(Join-Path $srcDir "$fn" ) $(Join-Path $Env:UserProfile ".$fn" ) -Force
     }
 
     Write-ChocolateySuccess "$pkg"
