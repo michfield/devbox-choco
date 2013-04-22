@@ -3,7 +3,7 @@
   <metadata>
     <id>Devbox-Clink</id>
     <title>Devbox Clink</title>
-    <version>0.3.1</version>
+    <version>0.3.1.20130422</version>
     <authors>Martin Ridgers</authors>
     <owners>Michael Field</owners>
     <summary>Bringing Bash's powerful command line editing to Microsoft Windows' cmd.exe.</summary>
@@ -22,7 +22,7 @@
       <dependency id="Devbox-Common"/>
       <dependency id="Devbox-VCRedist2010"/>
     </dependencies>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Add history alias .bat support</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

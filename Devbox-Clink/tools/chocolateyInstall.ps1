@@ -12,6 +12,14 @@ Stop-OnAppIsInstalled -pkg $packageName -match "clink" -force $force
 
 try {
     Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64" -validExitCodes $validExitCodes
+
+    # Auto-run system supported - see Devbox-Common package
+    $srcDir = $(Get-Item $(Split-Path -parent $MyInvocation.MyCommand.Definition)).parent.FullName | Join-Path -ChildPath "bin"
+    foreach ($fn in @("bashrc.include.clink.bat"))
+    {
+        Copy-Item $(Join-Path $srcDir "$fn" ) $(Join-Path $Env:UserProfile ".$fn" ) -Force
+    }
+
     Write-ChocolateySuccess "$packageName"
 } catch {
     Write-ChocolateyFailure "$packageName" "$($_.Exception.Message)"
