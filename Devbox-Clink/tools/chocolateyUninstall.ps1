@@ -21,6 +21,13 @@ try
         # uninstaller, without any switches.
         #
         Uninstall-ChocolateyPackage -package "$packageName" -silent "/S" -file "$uninstallExe" -validExitCodes @(0)
+
+        # Delete leftover from auto-run system - see Devbox-Common
+        foreach ($fn in @(".bashrc.include.clink.bat"))
+        {
+            $bat = Join-Path $env:UserProfile $fn
+            if (Test-Path "$bat") { Remove-Item "$bat" -ErrorAction SilentlyContinue }
+        }
     }
 
     Write-ChocolateySuccess "$packageName"

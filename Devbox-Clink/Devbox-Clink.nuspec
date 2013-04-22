@@ -3,14 +3,14 @@
   <metadata>
     <id>Devbox-Clink</id>
     <title>Devbox Clink</title>
-    <version>0.3.1</version>
+    <version>0.3.1.20130422</version>
     <authors>Martin Ridgers</authors>
     <owners>Michael Field</owners>
     <summary>Bringing Bash's powerful command line editing to Microsoft Windows' cmd.exe.</summary>
     <description>
       Clink combines the native Windows shell cmd.exe with the powerful command line editing features of the GNU Readline library, which provides rich completion, history, and line-editing capabilities. Readline is best known its use in the famous Unix shell Bash, the standard shell for Mac OS X and many Linux distributions.
       NOTE: This package contains a valid automatic uninstall procedure, so you don't need to manually reverse whatever actions installer did.
-      NOTE: Devbox phrase in a name of this package is used as signature to indicate high quality standards. Functionally, the package is a standard Chocolatey package, same as any other package.
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
     </description>
     <projectUrl>https://code.google.com/p/clink/</projectUrl>
     <tags>devbox admin console cmd readline bash completion lua</tags>
@@ -22,7 +22,7 @@
       <dependency id="Devbox-Common"/>
       <dependency id="Devbox-VCRedist2010"/>
     </dependencies>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Add history alias .bat support</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
