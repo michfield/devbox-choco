@@ -3,7 +3,7 @@
   <metadata>
     <id>Devbox-Common</id>
     <title>Devbox Common Settings</title>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <authors>Michael Field, Ethan Brown</authors>
     <owners>Michael Field</owners>
     <summary>Devbox-Common</summary>
@@ -26,7 +26,7 @@
     <dependencies>
       <dependency id="Devbox-Common.extension" version="1.0.0" />
     </dependencies>
-    <releaseNotes>Description change</releaseNotes>
+    <releaseNotes>Fix setenv.bat</releaseNotes>
   </metadata>
   <files>
     <file src="bin\**" target="bin" />
