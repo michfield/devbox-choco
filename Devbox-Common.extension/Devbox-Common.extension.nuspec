@@ -3,31 +3,22 @@
   <metadata>
     <id>Devbox-Common.extension</id>
     <title>Devbox Common Extension</title>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Michael Field</authors>
     <owners>Michael Field</owners>
     <summary>Helper Functions packed as Chocolatey extension</summary>
     <description>
+      Package contains a helper functions installed as Chocolatey extensions. These functions are used by other Devbox-Common installers, and are usually used internally by Chocolatey engine.
 
-      Package contains a helper functions installed as Chocolatey extensions. These functions are used by other Devbox-Common installers, and are usually used internally by Chocolatey engine. Let's present you with some of a newly defined functions:
-
-      * Show-AppUninstallInfo
-      * Stop-OnAppIsInstalled
-      * Remove-Path
-      * Set-PathCleanup
-      * Remove-EnvironmentVariable
-      * Get-RootPath
-      * Find-FileInEnvPath
-      * Test-FileInEnvPath, etc.
+      Let's mention some of a newly defined shared functions: Show-AppUninstallInfo, Stop-OnAppIsInstalled, Remove-Path, Set-PathCleanup, Remove-EnvironmentVariable, Get-RootPath, Find-FileInEnvPath, Test-FileInEnvPath, etc.
 
       NOTE: This package contains a valid automatic uninstall procedure, so you don't need to manually reverse whatever actions installer did.
       NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
-
     </description>
     <projectUrl>https://github.com/michfield/devbox-choco</projectUrl>
     <tags>devbox extension</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Common.extension/Devbox-Common.extension.png</iconUrl>
-    <releaseNotes>Fixing bugs</releaseNotes>
+    <releaseNotes>Description change</releaseNotes>
   </metadata>
 </package>
