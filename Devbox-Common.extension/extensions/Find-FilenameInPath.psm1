@@ -10,23 +10,31 @@
 
 # multiPath is a list of paths, joined with semicolon
 #
-function Find-FileInPath {
+function Show-FilesInPath {
 param(
     [string] $fileName,
     [string] $multiPath
 )
     $multiPath.Split(';')  | Select-Object -unique | ?{!([System.String]::IsNullOrEmpty($_))} | %{
         if (Test-Path $_) {
-            ls $_ | ?{ $_.Name -like $fileName } | Select-Object -ExpandProperty Fullname -first 1
+            ls $_ | ?{ $_.Name -like $fileName } | Select-Object -ExpandProperty Fullname
         }
     }
+}
+
+# Returns only the first file found
+#
+function Find-FileInPath {
+param(
+    [string] $fileName,
+    [string] $multiPath
+)
+    Show-FilesInPath "$fileName" "$multiPath" | Select -first 1
 }
 
 # Searches for paths that are part of PATH variable, and returns full
 # file-path of a found file specified by wildcard or empty if none has
 # been found.
-#
-# Returns an object, with fields: .FullName, .Name, .Directory
 #
 function Find-FileInEnvPath {
 param(

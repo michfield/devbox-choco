@@ -3,13 +3,13 @@
   <metadata>
     <id>Devbox-Common.extension</id>
     <title>Devbox Common Extension</title>
-    <version>0.2.5</version>
+    <version>1.0.0</version>
     <authors>Michael Field</authors>
     <owners>Michael Field</owners>
     <summary>Helper Functions packed as Chocolatey extension</summary>
     <description>
 
-      Package contains a helper functions installed as Chocolatey extensions. These functions are used by other Devbox-Common installers. Let's present you some of a newly defined functions are:
+      Package contains a helper functions installed as Chocolatey extensions. These functions are used by other Devbox-Common installers, and are usually used internally by Chocolatey engine. Let's present you with some of a newly defined functions:
 
       * Show-AppUninstallInfo
       * Stop-OnAppIsInstalled
@@ -21,7 +21,7 @@
       * Test-FileInEnvPath, etc.
 
       NOTE: This package contains a valid automatic uninstall procedure, so you don't need to manually reverse whatever actions installer did.
-      NOTE: Devbox phrase in a name of this package is used as signature to indicate high quality standards. Functionally the package is a standard Chocolatey package, as any other package.
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
 
     </description>
     <projectUrl>https://github.com/michfield/devbox-choco</projectUrl>
