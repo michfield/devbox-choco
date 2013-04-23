@@ -10,6 +10,9 @@
     <description>
       SEd (stream editor) isn't an interactive text editor. Instead, it is used to filter text, i.e., it takes text input, performs some operation or set of operations on it, and outputs the modified text. SEd is typically used for extracting part of a file using pattern matching or substituting multiple occurrences of a string within a file.
       This package installs GNU SEd in C:\Program Files\Tools directory, both on x86 and x64 systems.
+
+      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
     </description>
     <projectUrl>http://gnuwin32.sourceforge.net/packages/sed.htm</projectUrl>
     <tags>devbox admin sed gnu</tags>
