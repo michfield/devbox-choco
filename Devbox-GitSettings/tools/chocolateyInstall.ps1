@@ -254,20 +254,6 @@ try {
 
     # Set useful Git aliases
     #
-    # http://technosorcery.net/blog/2011/12/11/making-git-a-little-less-verbose/
-    #
-
-#  $user = git config --global --get user.name
-#  if ($user)
-#  {
-#    git config --global alias.standup "log --since yesterday --oneline --author $user"
-#  }
-#
-
-    $user = $(& "$exeGit" config --get user.name)
-    $user = if ($user) { $user } else { $env:Username }
-
-    git config --global alias.standup ""
 
     $opts = @{}
     $opts["alias.aliases"   ] = "config --get-regexp alias"
@@ -317,7 +303,11 @@ try {
 
     # Log, history, stats, etc
 
+        $user = $(& "$exeGit" config --get user.name)
+        $user = if ($user) { $user } else { $env:Username }
+
         $opts["alias.standup"   ] = "log --since yesterday --oneline --author '$user'"
+
         $opts["alias.last"      ] = "log -1 HEAD"
 
         $opts["alias.l"         ] = "log"
