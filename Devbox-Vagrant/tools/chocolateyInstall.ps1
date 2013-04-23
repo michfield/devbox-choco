@@ -20,6 +20,8 @@ try {
     #
     Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64"  -validExitCodes $validExitCodes
 
+    # Vagrant will restart system so nothing in here will be executed
+
     # Success
     Write-ChocolateySuccess "$packageName"
 } catch {

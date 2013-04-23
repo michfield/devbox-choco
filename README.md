@@ -73,11 +73,14 @@ or even shorter:
 ## Install Devbox stack
 
     :: We assume that Choco is already installed
+    
     cinst Devbox-Common.extension
     cinst Devbox-Common
     cinst Devbox-VirtualBox
     cinst Devbox-Vagrant
-    :: Now exit and re-enter command shell or type 'setenv'
+
+    :: Vagrant will probably restart system without question.
+    :: If not, restart command shell or type 'setenv'
 
 ## Install Devbox optional components
 
