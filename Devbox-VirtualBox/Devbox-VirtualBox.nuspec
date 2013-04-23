@@ -20,7 +20,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-VirtualBox/Devbox-VirtualBox.png</iconUrl>
     <dependencies>
-      <dependency id="Devbox-Common" version="0.2.2" />
+      <dependency id="Devbox-Common"/>
     </dependencies>
     <releaseNotes></releaseNotes>
   </metadata>

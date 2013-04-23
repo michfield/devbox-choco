@@ -10,6 +10,9 @@
     <description>
       UnZip is an extraction utility for archives compressed in .zip format, also called `zipfiles`. Although highly compatible both with PKWARE's PKZIP and PKUNZIP utilities for MS-DOS and with Info-ZIP's own Zip program, primary objectives has been portability and non-MSDOS functionality.
       This package installs GNU UnZip in C:\Program Files\Tools directory, both on x86 and x64 systems.
+
+      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
+      NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
     </description>
     <projectUrl>http://gnuwin32.sourceforge.net/packages/unzip.htm</projectUrl>
     <tags>devbox admin unzip zip gnu</tags>

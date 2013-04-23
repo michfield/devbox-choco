@@ -77,17 +77,28 @@ or even shorter:
     cinst Devbox-Common
     cinst Devbox-VirtualBox
     cinst Devbox-Vagrant
-    :: Now exit and re-enter command shell 
+    :: Now exit and re-enter command shell or type 'setenv'
 
 ## Install Devbox optional components
 
-    cinst Devbox-Wget
-    cinst Devbox-Sed
-    cinst Devbox-UnZip
-    cinst Devbox-RapidEE
-    cinst Devbox-Nano
-    cinst Devbox-VCRedist2010
-    cinst Devbox-Clink
+    :: Tools
+    Devbox-Wget
+    Devbox-UnZip
+    Devbox-Sed
+    Devbox-RapidEE
+    Devbox-Nano
+
+    :: Console improvements
+    Devbox-VCRedist2010
+    Devbox-Clink
+    Devbox-ConEmu
+
+    :: Git
+    Devbox-Notepad2
+    Devbox-P4Merge
+    Devbox-Git
+    Devbox-GitFlow
+    Devbox-GitSettings
 
 ## Conclusion
 
