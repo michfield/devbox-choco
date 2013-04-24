@@ -85,23 +85,23 @@ or even shorter:
 ## Install Devbox optional components
 
     :: Tools
-    Devbox-Wget
-    Devbox-UnZip
-    Devbox-Sed
-    Devbox-RapidEE
-    Devbox-Nano
+    cinst Devbox-Wget
+    cinst Devbox-UnZip
+    cinst Devbox-Sed
+    cinst Devbox-RapidEE
+    cinst Devbox-Nano
 
     :: Console improvements
-    Devbox-VCRedist2010
-    Devbox-Clink
-    Devbox-ConEmu
+    cinst Devbox-VCRedist2010
+    cinst Devbox-Clink
+    cinst Devbox-ConEmu
 
     :: Git
-    Devbox-Notepad2
-    Devbox-P4Merge
-    Devbox-Git
-    Devbox-GitFlow
-    Devbox-GitSettings
+    cinst Devbox-Notepad2
+    cinst Devbox-P4Merge
+    cinst Devbox-Git
+    cinst Devbox-GitFlow
+    cinst Devbox-GitSettings
 
 ## Conclusion
 
