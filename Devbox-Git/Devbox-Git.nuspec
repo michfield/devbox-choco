@@ -4,7 +4,7 @@
     <id>Devbox-Git</id>
     <title>Devbox Git</title>
     <version>1.8.1.20130422</version>
-    <authors>Johannes Schindelin, msysgit Committers</authors>
+    <authors>Johannes Schindelin, Linus Torvalds</authors>
     <owners>Michael Field</owners>
     <summary>Git is a powerful version control system aiming to be the fastest decentralized source code management tool on this planet.</summary>
     <description>
@@ -23,8 +23,8 @@
     </description>
     <projectUrl>http://msysgit.github.io/</projectUrl>
     <tags>devbox vcs scm git version control msysgit</tags>
-    <copyright>Copyright (c) 2010, Maximus5</copyright>
-    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <copyright>Copyright (C) 1991, 1999 Free Software Foundation, Inc.</copyright>
+    <licenseUrl>https://github.com/msysgit/git/blob/master/LGPL-2.1</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Git/Devbox-Git.png</iconUrl>
     <dependencies>
