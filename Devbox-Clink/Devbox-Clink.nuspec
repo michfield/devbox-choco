@@ -3,7 +3,7 @@
   <metadata>
     <id>Devbox-Clink</id>
     <title>Devbox Clink</title>
-    <version>0.3.1.20130422</version>
+    <version>0.4.2.14045</version>
     <authors>Martin Ridgers</authors>
     <owners>Michael Field</owners>
     <summary>Bringing Bash's powerful command line editing to Microsoft Windows' cmd.exe.</summary>
@@ -12,17 +12,17 @@
       NOTE: This package contains a valid automatic uninstall procedure, so you don't need to manually reverse whatever actions installer did.
       NOTE: Phrase « Devbox » in a name of this package is used as signature to indicate high quality standards. Functionally, the package is the same as any other Chocolatey package.
     </description>
-    <projectUrl>https://code.google.com/p/clink/</projectUrl>
+    <projectUrl>http://mridgers.github.io/clink/</projectUrl>
     <tags>devbox admin console cmd readline bash completion lua</tags>
-    <copyright>Copyright (C) 2012 Martin Ridgers</copyright>
-    <licenseUrl>https://code.google.com/p/clink/source/browse/LICENSE</licenseUrl>
+    <copyright>Copyright (C) 2014 Martin Ridgers</copyright>
+    <licenseUrl>https://github.com/mridgers/clink/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-Clink/Devbox-Clink.png</iconUrl>
     <dependencies>
       <dependency id="Devbox-Common"/>
       <dependency id="Devbox-VCRedist2010"/>
     </dependencies>
-    <releaseNotes>Add history alias .bat support</releaseNotes>
+    <releaseNotes>Updated to latest clink version</releaseNotes>
   </metadata>
   <files>
     <file src="bin\**" target="bin" />

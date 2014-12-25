@@ -1,6 +1,6 @@
 ﻿$packageName = "Devbox-Clink"
 $installerType = "exe"
-$url = "https://clink.googlecode.com/files/clink_0.3.1_setup.exe"
+$url = "https://github.com/mridgers/clink/releases/download/0.4.2/clink_0.4.2_setup.exe"
 $url64 = $url
 $silentArgs = "/S"
 $validExitCodes = @(0)
