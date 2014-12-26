@@ -1,6 +1,6 @@
 ﻿$packageName = "Devbox-VirtualBox" # filename-safe value
 $installerType = "exe"
-$url = "http://download.virtualbox.org/virtualbox/4.2.12/VirtualBox-4.2.12-84980-Win.exe"
+$url = "http://download.virtualbox.org/virtualbox/4.3.20/VirtualBox-4.3.20-96997-Win.exe"
 $url64 = $url
 $silentArgs = "-silent"
 $validExitCodes = @(0)
@@ -14,12 +14,6 @@ $validExitCodes = @(0)
 Stop-OnAppIsInstalled -pkg $packageName -match "Oracle VM VirtualBox" -ignore "Oracle VM VirtualBox Guest Additions" -force $force
 
 try {
-
-    # We must import the certificates before installing package itself to
-    # avoid interactive prompt. Source: http://wpkg.org/Sun_xVM_VirtualBox
-    #
-    $absToolsDir="$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-    Start-ChocolateyProcessAsAdmin "certutil -addstore 'TrustedPublisher' '$absToolsDir\oracle.cer'" -validExitCodes $validExitCodes
 
     # Install package
     #

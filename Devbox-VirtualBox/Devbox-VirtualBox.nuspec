@@ -1,9 +1,9 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Devbox-VirtualBox</id>
     <title>Devbox VirtualBox</title>
-    <version>4.2.12</version>
+    <version>4.3.20.96997</version>
     <authors>Oracle Corporation, Innotek</authors>
     <owners>Michael Field</owners>
     <summary>VirtualBox is a cross-platform virtualization application.</summary>
@@ -22,7 +22,7 @@
     <dependencies>
       <dependency id="Devbox-Common"/>
     </dependencies>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Updated version</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
