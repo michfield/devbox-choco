@@ -21,8 +21,9 @@ try {
     # a software in default x64 path - `Program Files (x86)`. Maybe in
     # the future the installer will work as expected.
     #
+
     $installPath = Join-Path $Env:ProgramFiles "Rapid Environment Editor"
-    $silentArgs = "/S /D=$installPath"
+    $silentArgs = "/silent /dir=`"$installPath`""
 
     # Install package. It won't add itself to the PATH
     Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64" -validExitCodes $validExitCodes

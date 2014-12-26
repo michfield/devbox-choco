@@ -20,8 +20,9 @@ try
         # Silent uninstall. Variable from registry is just a path to an
         # uninstaller, without any switches.
         #
-        Uninstall-ChocolateyPackage -package "$packageName" -silent "/S" -file "$uninstallExe" -validExitCodes @(0)
+        Uninstall-ChocolateyPackage -package "$packageName" -silent "/SILENT" -file "$uninstallExe" -validExitCodes @(0)
     }
+
 
     # Delete any existing batch files from an earlier install,
     # and ignore errors.

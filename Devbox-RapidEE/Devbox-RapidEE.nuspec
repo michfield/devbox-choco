@@ -1,9 +1,9 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Devbox-RapidEE</id>
     <title>Devbox RapidEE</title>
-    <version>0.0.0.20130422</version>
+    <version>0.0.0.20141226</version>
     <authors>Oleg Danilov</authors>
     <owners>Michael Field</owners>
     <summary>Rapid Environment Editor (RapidEE) is an environment variables editor.</summary>
@@ -15,7 +15,7 @@
     </description>
     <projectUrl>http://www.rapidee.com/</projectUrl>
     <tags>devbox admin rapidee</tags>
-    <copyright>Copyright (c) 2010-2013 Oleg Danilov. All rights reserved.</copyright>
+    <copyright>Copyright (c) 2010-2014 Oleg Danilov. All rights reserved.</copyright>
     <licenseUrl>http://www.rapidee.com/en/license</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-RapidEE/Devbox-RapidEE.png</iconUrl>
