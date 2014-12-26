@@ -22,7 +22,7 @@
     <dependencies>
       <dependency id="Devbox-Common"/>
     </dependencies>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Supporting unattended install and uninstall</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
